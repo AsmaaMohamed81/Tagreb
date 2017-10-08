@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/b1"
+    tools:context="com.example.ok.tagreb.All">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+        android:text="Audio" />
+
+    <Button
+        android:id="@+id/cal"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+        android:text="Calclator Sum" />
+
+    <Button
+        android:id="@+id/web"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Web View" />
+
+    <Button
+        android:id="@+id/asset"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Web View Asset 7kyat" />
+
+    <Button
+        android:id="@+id/alert"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alert" />
+    <Button
+        android:id="@+id/shard"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shard Prafrance" />
+
+    <Button
+        android:id="@+id/video"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vedio" />
+
+    <Button
+        android:id="@+id/color_picker"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_color_picker" />
+
+    <Button
+        android:id="@+id/gallry"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gallry" />
+    <Button
+        android:id="@+id/admob"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AdMob" />
+
+    <Button
+        android:id="@+id/start"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start UP" />
+
+    <Button
+        android:id="@+id/toast"
+        android:background="@drawable/button2"
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Color Toast" />
+
+            <Button
+                android:id="@+id/call"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Call" />
+
+            <Button
+                android:id="@+id/toastimg"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toast Image" />
+            <Button
+                android:id="@+id/picasso"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="picasso" />
+            <Button
+                android:id="@+id/toasthimg"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toast Image" />
+            <Button
+                android:id="@+id/shareaimagText"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="share Image Text" />
+            <Button
+                android:id="@+id/notification"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notification" />
+            <Button
+                android:id="@+id/textread"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read TEXt" />
+
+            <Button
+                android:id="@+id/list"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="List Just" />
+
+            <Button
+                android:id="@+id/listread"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="List Read TExt" />
+
+            <Button
+                android:id="@+id/colortext"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color TExt" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
