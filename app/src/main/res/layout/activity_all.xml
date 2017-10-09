@@ -206,6 +206,15 @@
                 android:layout_height="wrap_content"
                 android:text="Color TExt" />
 
+            <Button
+                android:id="@+id/map"
+                android:background="@drawable/button2"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAp" />
+
 
         </LinearLayout>
 

@@ -1,14 +1,14 @@
 package com.example.ok.tagreb;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 public class All extends AppCompatActivity {
     Button alert,cal,hkyat,audio,web,shard,vidioview,color,gallry,
-            admob,start,toast,call,toastimg,picasso,shareimge,notify,textread,list,listread,clortext;
+            admob,start,toast,call,toastimg,picasso,shareimge,notify,textread,list,listread,clortext,map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,8 @@ public class All extends AppCompatActivity {
         listread= (Button) findViewById(R.id.listread);
 
         clortext= (Button) findViewById(R.id.colortext);
+        map= (Button) findViewById(R.id.map);
+
 
 
 
@@ -242,6 +244,15 @@ public class All extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent asset = new Intent(All.this,ColorTEXT.class);
+                startActivity(asset);
+
+            }
+        });
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent asset = new Intent(All.this,MapsActivity.class);
                 startActivity(asset);
 
             }
