@@ -1,6 +1,10 @@
 package com.example.ok.tagreb;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
@@ -11,6 +15,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -45,17 +50,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
-        LatLng gam3a = new LatLng(30.5731359,31.00989);
-        mMap.addMarker(new MarkerOptions().position(gam3a).title("Marker in Sydney")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.g1))).showInfoWindow();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gam3a,16));
+        final LatLng gam3a = new LatLng(30.5731359, 31.00989);
+        mMap.addMarker(new MarkerOptions()
+                .position(gam3a)
+                .title("Marker in Sydney")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.mark))).showInfoWindow();
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gam3a, 18));
 
 
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
-                Toast.makeText(MapsActivity.this,latLng.latitude +","+latLng.longitude, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapsActivity.this, latLng.latitude + "," + latLng.longitude, Toast.LENGTH_SHORT).show();
+                mMap.clear();
+                mMap.addMarker(new MarkerOptions().position(latLng).title("Location")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.mark))).showInfoWindow();
+
+
+                mMap.addPolyline(new PolylineOptions()
+                        .add(gam3a,latLng)
+                        .width(20)
+                        .color(Color.RED)
+                );
             }
         });
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
     }
+
+
 }
