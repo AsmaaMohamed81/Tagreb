@@ -1,0 +1,15 @@
+keytool -exportcert-keystore "C:\Users\ok\.android\debug.keystore" -list - v
+
+keytool -list -v -keystore "C:\Users\ok\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+
+
+
+
+C:\Users\ok>cd C:\Program Files (x86)\Java\jdk1.8.0_102\bin
+
+
+
+
+         SHA1: C3:14:86:0B:8C:B1:F9:2C:A8:AA:D7:D1:DE:59:5D:7B:86:A1:BB:3F
+  

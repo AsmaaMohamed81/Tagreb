@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تجربه</string>
+    <string name="delet">حذف</string>
+    <string name="mess">هل تريد حذف رساءلك ؟؟</string>
+    <string name="no">لا</string>
+    <string name="tit">احذر</string>
+    <string name="yes">نعم</string>
+</resources>

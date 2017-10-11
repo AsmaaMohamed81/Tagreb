@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/b1"
+
+    android:orientation="vertical"
+    tools:context="com.example.ok.tagreb.Cal_Sum">
+
+
+    <EditText
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/fist_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="First num" />
+
+    <EditText
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/second_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Second num" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/ruslt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الناتج"
+        android:textSize="20dp"
+        android:textColor="#cf4545"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sum"
+        android:background="@drawable/button2"/>
+</LinearLayout>
