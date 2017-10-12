@@ -48,8 +48,7 @@ TextView textread;
             try {
                 String line;
                 while ((line=br.readLine())!=null){
-                    text.append(line);
-                    text.append('\n');
+                    text.append(line+"\n");
                 }
 
             }

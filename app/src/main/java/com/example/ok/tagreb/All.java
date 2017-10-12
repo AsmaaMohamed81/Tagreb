@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class All extends AppCompatActivity {
     Button alert,cal,hkyat,audio,web,shard,vidioview,color,gallry,
-            admob,start,toast,call,toastimg,picasso,shareimge,notify,textread,list,listread,clortext,map;
+            admob,start,toast,call,toastimg,picasso,shareimge,notify,textread,list,listread,clortext,map,searchtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class All extends AppCompatActivity {
 
         clortext= (Button) findViewById(R.id.colortext);
         map= (Button) findViewById(R.id.map);
+        searchtext= (Button) findViewById(R.id.searchtext);
 
 
 
@@ -257,7 +258,14 @@ public class All extends AppCompatActivity {
 
             }
         });
+        searchtext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent asset = new Intent(All.this,Search_Text.class);
+                startActivity(asset);
 
+            }
+        });
 
 
     }
