@@ -86,7 +86,8 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Search_Text"></activity>
+        <activity android:name=".Search_Text" />
+        <activity android:name=".Search_List"></activity>
     </application>
 
 </manifest>
