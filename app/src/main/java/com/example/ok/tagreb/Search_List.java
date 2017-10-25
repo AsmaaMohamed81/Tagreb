@@ -38,64 +38,59 @@ public class Search_List extends AppCompatActivity {
 
         esarch = (EditText) findViewById(R.id.Esearch);
 
-        txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Alist.clear();
 
-                try {
-                    InputStream Is = getAssets().open("rttr.txt");
-                    InputStreamReader ISR = new InputStreamReader(Is);
-                    BufferedReader BR = new BufferedReader(ISR);
+    }
 
+    public void search(View view) {
 
-                    try {
-                        String line;
-                        while ((line = BR.readLine()) != null) {
-                            Alist.add(line);
+        Alist_Search.clear();
+        String item_search = esarch.getText().toString().trim();
 
-                        }
+        for (int i = 0; i < Alist.size(); i++) {
+            String item = Alist.get(i).toString();
 
-                    } catch (IOException e) {
-
-
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            if (item.contains(item_search)) {
+                Alist_Search.add(item);
 
             }
-        });
+        }
+        ArrayAdapter Aps = new ArrayAdapter(this, R.layout.list_item, R.id.text, Alist_Search);
+        tlist.setAdapter(Aps);
+        cal.setText("مجموع العنواين : " + Alist_Search.size());
+    }
+
+
+    public void txt(View view) {
+
+
+        Alist.clear();
+
+        try {
+            InputStream Is = getAssets().open("rttr.txt");
+            InputStreamReader ISR = new InputStreamReader(Is);
+            BufferedReader BR = new BufferedReader(ISR);
+
+
+            try {
+                String line;
+                while ((line = BR.readLine()) != null) {
+                    Alist.add(line);
+
+                }
+
+            } catch (IOException e) {
+
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         ArrayAdapter Ap = new ArrayAdapter(this, R.layout.list_item, R.id.text, Alist);
         tlist.setAdapter(Ap);
         cal.setText("مجموع العنواين : " + Alist.size());
 
-
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Alist_Search.clear();
-                String item_search = esarch.getText().toString().trim();
-
-                for (int i = 0; i < Alist.size(); i++) {
-                    String item = Alist.get(i).toString();
-
-                    if (item.contains(item_search)) {
-                        Alist_Search.add(item);
-
-                    }
-
-
-                }
-
-
-            }
-        });
-
-        ArrayAdapter Aps = new ArrayAdapter(this, R.layout.list_item, R.id.text, Alist_Search);
-        tlist.setAdapter(Aps);
-        cal.setText("مجموع العنواين : " + Alist_Search.size());
     }
 }

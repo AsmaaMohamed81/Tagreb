@@ -39,14 +39,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TXT" />
+            android:text="TXT"
+            android:onClick="txt"
+            />
 
         <Button
             android:id="@+id/Bsearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Search" />
+            android:text="Search"
+            android:onClick="search"/>
 
 
 

@@ -14,6 +14,6 @@ public class Picassoo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picasso);
         ImageView img = (ImageView)findViewById(R.id.img);
-        Picasso.with(this).load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQbFN_wyY914ja_xM4l4l1maHduhnJtEB5Rhn_TMBxzzWmQKZ1vOlcsY").into(img);
+        Picasso.with(this).load("http://mimages.ksu.edu.sa/images/Makhtotah%206377/DSC00192.JPG").into(img);
     }
 }
